@@ -2,10 +2,7 @@ from bs4 import BeautifulSoup as bs
 from time import sleep
 import pandas as pd
 from splinter import Browser
-# from splinter.exceptions import ElementDoesNotExist
-# from selenium.webdriver import ActionChains
 from webdriver_manager.chrome import ChromeDriverManager
-# from IPython.display import HTML
 
 def init_browser():
     executable_path = {'executable_path': ChromeDriverManager().install()}
