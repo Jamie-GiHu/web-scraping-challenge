@@ -8,8 +8,8 @@ This challenge requires us to build a web application that scrapes various websi
 * Data visualisation via HTML using MongoDB and Flask application
 
 ### Final application:
-![Fig1](Mission_to_Mars/screenshots/fig1-small.png)
-![Fig2](Mission_to_Mars/screenshots/fig2-small.png)
+![](Mission_to_Mars/screenshots/fig1-small.PNG)
+![Fig2](Mission_to_Mars/screenshots/fig2-small.PNG)
 
 ### Submission (within 'Mission to Mars' folder):
 1. Jupyter Notebook (filename: mission_to_mars.ipynb)
