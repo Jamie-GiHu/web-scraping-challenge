@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Scraping Homework</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div clas="container">
+        <div class="row">
+            <div class="jumbotron text-center">
+            <h1>Mission to Mars</h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+            </div>
+        </div>
+      
+    <!-- Mars News -->
+    <div class="row" id="mars-news">
+        <div class="col-md-12" style="margin:0px 20px 0px 20px">
+            <h3><strong>Latest Mars News</strong></h3>
+              <h4>{{mars.news_title}}</h4>
+                  <p>{{mars.news_paragraph}}</p>
+        </div>
+    </div>
+    
+    <!-- JPL Mars Space Images - Featured Image -->  
+    <div class ="row" id="mars-image">
+        <div class = "col-md-8 clearfix" style="margin:0px 0px 0px 20px">
+            <h3><strong>Featured Mars Image</strong></h3>
+            <img src = "{{mars.mars_featured_image}}" alt ="Mars Image" style="max-width: 95%">
+        </div>
+
+        <!-- Mars Facts -->
+        <div class = "col-md-3" style="margin:0px 0px 0px 20px">
+                <h3><strong>Mars Facts</strong></h3>
+                <p>{{mars.mars_facts | safe}}</p>
+        </div>
+    </div>  
+
+    <!-- Mars Hemispheres --> 
+    <div class ="row" id="mars-hemispheres">
+        <div class = "col-md-12" style="text-align: center; margin:20px 0px 0px 0px">
+            <h3><strong>Mars Hemispheres</strong></h3>
+
+            {% for mars_hemisphere in mars.mars_hemispheres %}
+                <div class = "col-md-6">
+                    <div class = "thumbnail">
+                        <img src = "{{mars_hemisphere.img_url}}"  style="max-width: 100%">
+                            <h4><strong>{{mars_hemisphere.title}}</strong></h4>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+  </div>
+
+</body>
+</html>
